@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@700&family=Noto+Serif+KR:wght@600;700&family=Roboto+Condensed:wght@700&display=swap"
+        rel="stylesheet">
+
+
+    <title>Lucky Sevun</title>
+
+    <style>
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'GmarketSansBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;500&display=swap');
+
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+
+            margin: auto auto auto auto;
+            width: 1150px;
+            z-index: 8;
+        }
+
+        body::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #858585;
+            border-radius: 10px;
+        }
+
+        body::-webkit-scrollbar-track {
+            background-color: rgb(219, 219, 219);
+            /* border-radius: 10px; */
+            /* box-shadow: inset 0px 0px 5px white; */
+        }
+
+
+
+        /*상단바, nav */
+
+        .topBar {
+            background-color: rgb(245, 245, 245);
+            color: rgb(15, 15, 15);
+            padding: 0.4rem;
+
+            font-family: 'GmarketSansMedium';
+            font-size: 12px;
+            padding-top: 8px;
+            padding-left: 15px;
+            z-index: 9;
+
+            display: flex;
+
+            margin: 0px;
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+
+        .topBar_name {
+            font-family: 'GmarketSansBold';
+            margin-right: 20px;
+
+        }
+
+        .topBar>span>a {
+            margin-right: 0px;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+
+        }
+
+        .topBar>span>a:hover {
+            margin-right: 0px;
+
+            color: white;
+            background-color: rgb(29, 29, 29);
+            text-decoration: none;
+
+        }
+
+
+        .nav-right-buttons {
+            display: flex;
+
+            position: absolute;
+            right: 10px;
+        }
+
+        .nav-right-buttons>div {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+
+            margin: 2px auto auto 8px;
+            /* margin-left: 8px; */
+        }
+
+        .btnGreen {
+            background-color: rgb(21, 179, 21);
+        }
+
+        .btnYellow {
+            background-color: rgb(243, 207, 44);
+        }
+
+        .btnRed {
+            background-color: rgb(224, 77, 77);
+        }
+
+
+        /*전체 섹션  */
+
+        .section {
+            background-color:rgb(235, 245, 234);
+        }
+
+
+
+        /* 메인 이미지 헤더파트 */
+
+        .header {
+            /* background: linear-gradient(to bottom, black 80%,rgba(0,0,0,0.1) 92% ,rgba(0,0,0,0)); */
+            background-color: black;
+            height: 620px;
+            padding: 60px 50px;
+            font-family: 'Press Start 2P', cursive;
+            color: rgb(21, 187, 21);
+            margin-bottom: 150px;
+        }
+
+        .header_middle {
+            display: flex;
+            margin-left: 130px;
+        }
+
+        .header_title {
+            /* top: 150px;
+            left: 120px; */
+            /* background-color: #e69113; */
+            font-size: 70px;
+            line-height: 1.1;
+        }
+
+        .cursor {
+            top: 150px;
+            left: 120px;
+
+            width: 50px;
+            height: 70px;
+
+            border-bottom: rgb(21, 187, 21) solid 15px;
+            animation: blink 1s step-end infinite;
+
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        /* 팀 설명 파트 */
+
+        .team_desc {
+            height: 450px;
+            background-color: #ffffff;
+            opacity: 0.9;
+            margin-bottom: 80px;
+            text-align: center;
+            padding: 10px, 0px, 10px, 0px;
+            /* font-family: monospace; */
+        }
+
+        .team_desc1 {
+            height: 150px;
+            font-size: 40px;
+            padding-top: 30px;
+            text-align: center;
+            font-family: 'Black Han Sans', 산세리프;
+        }
+
+        .teamcard-title {
+            font-size: 38px;
+            text-align: center;        
+        }
+
+        .card {
+            box-shadow: 2px 3px 10px  #929191;
+            text-align: left;
+        }
+
+        .card{
+            width: 350px;
+        }
+
+        .row{
+            width: auto;
+        }
+
+
+
+        /* 팀메이트 파트 */
+
+        .title_teammates {
+            font-family: 'GmarketSansBold';
+            text-align: center;
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+
+        .card1,
+        .card2 {
+            /* background-color: antiquewhite; */
+            /* border: 1px dotted red; */
+
+            /* width: 50vw; */
+            /* max-width: 800px; */
+            /* min-width: 1000px; */
+
+            padding: 2rem 0px 3rem 0px;
+            margin: auto;
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .card1>div,
+        .card2>div {
+            width: 300px;
+            height: 500px;
+
+            margin: auto 20px auto 20px;
+        }
+
+
+        .card-img {
+            text-align: center;
+            margin: 30px auto 30px auto;
+        }
+
+        .card-img>img {
+            width: 150px;
+            height: 150px;
+
+            border-radius: 50%;
+
+            text-align: center;
+        }
+
+
+        .card-contents {
+            background-color: rgb(252, 252, 252);
+            border-radius: 20px;
+            min-height: 250px;
+            padding: 20px;
+            margin: auto 15px 5px 15px;
+            border: solid 1px #f3f3f3;
+            box-shadow: 15px 15px 30px 0px rgba(128, 128, 128, 0.29);
+        }
+
+        .card-firstLine {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .card-name {
+            font-family: 'GmarketSansMedium';
+            font-size: 25px;
+            margin: 5px;
+        }
+
+        .card-mbti {
+            font-size: 15px;
+            font-weight: bold;
+            padding-top: 13px;
+        }
+
+        .card-comment {
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        .card-style {
+            color: rgba(128, 128, 128, 0.9);
+            font-size: 0.72rem;
+            font-weight: bold;
+            margin-bottom: 0.1rem;
+        }
+
+        .card-link {
+            display: flex;
+            justify-content: end;
+
+            margin-right: 15px;
+        }
+
+        .card-link>button {
+            color: white;
+            font-size: 18px;
+
+            background-color: rgb(240, 120, 84);
+
+            padding: 5px 10px 5px 10px;
+            border: 0;
+            border-radius: 20px;
+
+        }
+
+        /* 불이모지 파트 */
+
+        .fire {
+            padding: 2rem;
+            height: 680px;
+            /* background-color: brown; */
+            background: linear-gradient(150deg, #e69113, #e92b2b 800px, #f043bc 1100px);
+            /* #e69113 1000px */
+            /* display: flex;
+            justify-content: center; */
+
+        }
+
+        .fire_button {
+            width: 200px;
+            height: 90px;
+            border-radius: 55px;
+            background-color: white;
+
+            margin: auto;
+            margin-bottom: 20px;
+
+            display: flex;
+            /* justify-content: space-around; */
+
+        }
+
+
+        .fire_circle {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 0px;
+            /* background: radial-gradient(rgb(251, 255, 14) 50%, rgb(5, 247, 255) 70% , rgb(129, 0, 86) 98%); */
+            background: radial-gradient(rgb(255, 255, 255) 50%, rgb(243, 238, 231) 70%, rgb(199, 122, 7) 90%);
+            margin: 5px 5px 5px 5px;
+            /* box-shadow: 2px 2px 0px 0px rgba(128, 128, 128, 0.493); */
+
+            display: flex;
+            /* justify-content: center; */
+
+
+        }
+
+        .em-fire {
+            vertical-align: middle;
+            font-size: 35px;
+            margin: auto;
+        }
+
+        .fire_count {
+            margin: 24px 10px auto;
+            width: 70px;
+            font-family: 'GmarketSansMedium';
+            font-size: 30px;
+            text-align: center;
+        }
+
+        /* 댓글창 */
+
+        .reply_section {
+            width: 800px;
+            height: 400px;
+            background-color: white;
+            margin: 50px auto;
+            border-radius: 10px;
+            
+            display: grid;
+            grid-template-rows: 80px auto;
+        }
+
+        .reply_insert {
+            background-color: #e4e4e4;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            border-radius: 100px;
+        }
+
+        .reply_insert>div>input {
+            margin: 10px;
+            padding: 5px;
+        }
+
+
+
+        .reply_insNickname {
+            margin-left: 15px;
+        }
+        
+
+        .reply_insNickname_box {
+            border: 0px;
+            width: 80px;
+            font-family: 'GmarketSansMedium';
+
+        }
+
+        .reply_insNickname_box::placeholder {
+            margin: 5px;
+            font-family: 'GmarketSansMedium';
+        }
+
+
+        .reply_insComment {
+            border-width: 0px;
+            width: 450px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .reply_insComment_box {
+            border: 0px;
+            width: 320px;
+            font-family: 'GmarketSansMedium';
+
+        }
+
+        .reply_insComment_box::placeholder  {
+            font-family: 'GmarketSansMedium';
+        }
+
+
+        .dazimBtn{
+            height: 2.3rem;
+            width: 6rem;
+            border-radius: 40px;
+            margin-right: 10px;
+        }
+
+
+
+        /* 댓글 내용들 리스트 */
+
+        .reply_list{
+            /* display:; */
+            overflow:auto; 
+            width:auto; 
+            height:auto;
+            margin: 20px;
+            /* background-color: aquamarine; */
+        }
+
+        .reply_line {
+            display: flex;
+            justify-content: center;
+            /* background-color: #f8f8f8; */
+        }
+
+        .reply_line>div {
+            /* margin: 3px;
+            margin-right: 5px; */
+            padding: 5px;
+            font-size: 18px;
+
+
+        }
+
+        .reply_listNickname {
+            width: 100px;
+            margin-left: 10px;
+            font-family: 'GmarketSansMedium';
+
+        }
+
+        .reply_listComment {
+            width: 430px;
+            font-family: 'GmarketSansBold';
+
+        }
+
+
+        .reply_list::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .reply_list::-webkit-scrollbar-thumb {
+            background-color: #858585;
+            border-radius: 10px;
+        }
+
+        .reply_list::-webkit-scrollbar-track {
+            background-color: rgb(219, 219, 219);
+            /* border-radius: 10px; */
+            /* box-shadow: inset 0px 0px 5px white; */
+        }
+
+
+
+        /* TOP버튼 파트 */
+        .top_button {
+            background-color: rgb(255, 255, 255);
+            box-shadow: #e4e4e4 0px 0px 15px 0px;
+
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+
+            text-align: center;
+
+            display: flex;
+            align-items: center;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+
+        /* 버튼 */
+        .mypop_up {
+            width: 95%;
+            max-width: 500px;
+            margin: 20px auto 0px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 3px 0px gray;
+
+            display: none;
+        }
+
+        .mypost {
+            width: 95%;
+            max-width: 500px;
+            margin: 20px auto 0px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 3px 0px gray;
+
+            display: none;
+        }
+
+        .button1 {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            padding: 10px;
+            width: 140px;
+            transition: all 0.5s;
+            position: absolute;
+            cursor: pointer;
+            top: 577px;
+        }
+
+        .button1 span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button1 span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -10px;
+            transition: 0.5s;
+        }
+
+        .button1:hover span {
+            padding-right: 23px;
+        }
+
+        .button1:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        .button2 {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: #f4511e;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 20px;
+            padding: 10px;
+            width: 140px;
+            transition: all 0.5s;
+            position: absolute;
+            cursor: pointer;
+            top: 575px;
+            left: 1377px;
+        }
+
+        .button2 span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button2 span:after {
+            content: '\00AB';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 10px;
+            transition: 0.5s;
+        }
+
+        .button2:hover span {
+            padding-left: 22px;
+        }
+
+        .button2:hover span:after {
+            opacity: 1;
+            left: 0;
+        }
+
+
+        /* 방문자 */
+        .visitors {
+            margin: 20px auto 10px auto;
+            width: 100%;
+            max-width: auto;
+        }
+    </style>
+
+    <script>
+
+        // $(document).ready(function () {        
+        //     listing();
+        // });
+
+        // function open_box() {
+        //     $("#post-box").show();
+        // }
+        // function close_box() {
+        //     $("#post-box").hide();
+        // }
+
+        // function open_box1() {
+        //     $("#comment-box").show();
+        // }
+        // function close_box1() {
+        //     $("#comment-box").hide();
+        // }
+
+        // function open_box() {
+        //     $("#").show();
+        // }
+        // function close_box() {
+        //     $("#").hide();
+        // }
+
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <!-- 상단 바 -->
+
+    <nav class="topBar">
+        <span class="topBar_name">Lucky Sevun</span>
+        <span><a href="#header">Home</a></span>
+        <span><a href="#team">Team</a></span>
+        <span><a href="#teammates">Teammates</a></span>
+
+        <div class="nav-right-buttons">
+            <div class="btnGreen"></div>
+            <div class="btnYellow"></div>
+            <div class="btnRed"></div>
+        </div>
+    </nav>
+
+
+    <!-- 메인 이미지 헤더 파트 -->
+
+    <header id="header" class="header">
+        <div class='header_upper'>
+            Hello world! <br>
+            &nbsp;&nbsp;&nbsp;string camp = tommorrow; <br>
+            &nbsp;&nbsp;&nbsp;string track = spring; <br>
+            &nbsp;&nbsp;&nbsp;int gen = 6; <br>
+            &nbsp;&nbsp;&nbsp;int teamNum = 7; <br>
+            &nbsp;&nbsp;&nbsp;string teamName =<br>
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="header_middle">
+            <div><span class="header_title">LUCKY SEVUN</span></div>
+            <div class="cursor"></div>
+        </div>
+        <div class="header_lower">
+            <br>
+            <br>
+            <br>
+            <br>
+            &nbsp;&nbsp;&nbsp;while(!we_make_it) {<br>
+            <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br> -->
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;study;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get_in_trouble;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;overcome;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+        </div>
+    </header>
+
+    <!-- 팀 설명 파트 -->
+    <div class="teammates">
+        <h1 class="title_teammates">Our Team</h1>
+        <div class="team_desc">
+            <div class="team_desc1">We are Lucky sevun</div>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="teamcard-title">
+                                <i class="bi bi-1-square"></i> 특징
+                            </h5>
+                            <p class="card-text">3명으로 시작했지만 누구보다 단단한 팀웍으로<br>5명몫을 해내고있는 끈끈한 팀이에요.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="teamcard-title">
+                                <i class="bi bi-2-square"></i> 약속
+                            </h5>
+                            <p class="card-text">1.각자 맡은 파트를 최대한 열심히하도록 노력하고 최선의 결과를 도출하기<br>2.매일 밤 08시40분부터 각자 오늘의 결과를 공유하고 서로 점검해주기</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="teamcard-title">
+                                <i class="bi bi-3-square"></i> 목표
+                            </h5>
+                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in
+                                to additional content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 팀메이트 파트 -->
+    <div id="teammates" style="margin-bottom: 50px;"></div>
+    <div class="teammates">
+        <h1 class="title_teammates">Teammates</h1>
+        <div class="card1 section">
+            <div class="card1-1">
+                <div class="card-img">
+                    <img src="https://ca.slack-edge.com/T043597JK8V-U054PFYHF5X-088943791073-512" alt="...">
+                </div>
+                <div class="card-contents">
+                    <div class="card-firstLine">
+                        <div class="card-name"> 권진혁</div>
+                        <div class="card-mbti"> enfp</div>
+                    </div>
+                    <div class="card-comment">
+                        저는 코딩을 합니다.
+                        그렇지만 내일은 코딩을 합니다.
+                        dddd<br>
+                        dddd
+                    </div>
+                    <div class="card-style">
+                        스타일있는 스타일
+                    </div>
+                    <div class="card-style">
+                        협업스타일
+                    </div>
+                </div>
+                <div class="card-link">
+                    <button>Link</button>
+                </div>
+            </div>
+            <div class="card1-2">
+                <div class="card-img">
+                    <img src="https://ca.slack-edge.com/T043597JK8V-U056FFYK0F3-91f8edc146f8-512" alt="...">
+                </div>
+                <div class="card-contents">
+                    <div class="card-firstLine">
+                        <div class="card-name"> 김현우</div>
+                        <div class="card-mbti"> intp</div>
+                    </div>
+                    <div class="card-comment">
+                        누군가가 하는 게 겁나 쉬워보인다면 그 사람이 고인물인 것이다.
+                    </div>
+                    <div class="card-style">
+                        스타일있는 스타일
+                    </div>
+                    <div class="card-style">
+                        협업스타일
+                    </div>
+                </div>
+                <div class="card-link">
+                    <button>Link</button>
+                </div>
+            </div>
+            <div class="card1-3">
+                <div class="card-img">
+                    <img src="https://ca.slack-edge.com/T043597JK8V-U0545M1F4EA-g34ecb514d06-512" alt="...">
+                </div>
+                <div class="card-contents">
+                    <div class="card-firstLine">
+                        <div class="card-name"> 정해동</div>
+                        <div class="card-mbti"> entp</div>
+                    </div>
+                    <div class="card-comment">
+                        내 동생은 백엔드 엔지니어.
+                    </div>
+                    <div class="card-style">
+                        스타일있는 스타일
+                    </div>
+                    <div class="card-style">
+                        협업스타일
+                    </div>
+                </div>
+                <div class="card-link">
+                    <button>Link</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="card2 section">
+            <!-- <div></div> -->
+            <div class="card2-1">
+                <div class="card-img">
+                    <img src="https://ca.slack-edge.com/T043597JK8V-U0545M1F4EA-g34ecb514d06-512" alt="...">
+                </div>
+                <div class="card-contents">
+                    <div class="card-firstLine">
+                        <div class="card-name"> 문채원</div>
+                        <div class="card-mbti"> xxxx</div>
+                    </div>
+                    <div class="card-comment">
+                        목요일에 만나요.
+                    </div>
+                    <div class="card-style">
+                        아직까진 파악하기 힘든 스타ss일
+                    </div>
+                    <div class="card-style">
+                        목요일부터 협업하는 스타일
+                    </div>
+                </div>
+                <div class="card-link">
+                    <button>Link</button>
+                </div>
+
+            </div>
+            <div class="card2-2">
+                <div class="card-img">
+                    <img src="https://ca.slack-edge.com/T043597JK8V-U0545M1F4EA-g34ecb514d06-512" alt="...">
+                </div>
+                <div class="card-contents">
+                    <div class="card-firstLine">
+                        <div class="card-name"> ??? </div>
+                        <div class="card-mbti"> xxxx</div>
+                    </div>
+                    <div class="card-comment">
+                        한 마디를 남겨주세요.
+                    </div>
+                    <div class="card-style">
+                        본인의 스타일
+                    </div>
+                    <div class="card-style">
+                        협업 스타일
+                    </div>
+                </div>
+                <div class="card-link">
+                    <button>Link</button>
+                </div>
+
+
+            </div>
+            <!-- <div></div> -->
+        </div>
+    </div>
+
+
+    <!--팀원 등록_버튼-->
+
+    <!--팀원 등록_화면-->
+
+
+
+    <!-- 불이모지 파트 & 방명록 -->
+    <div class="fire">
+        <div class="fire_button" onclick="countPlus()">
+            <button class="fire_circle" id="fireCircle">
+                <i class="em em-fire" aria-role="presentation" aria-label="FIRE"></i>
+            </button>
+            <div class="fire_count">0</div>
+        </div>
+        <h2 style="color:white; margin-top: 35px; text-align: center;">자신의 1년 뒤를 다짐해봐요! </h2>
+
+        <!-- 파이어 밑 댓글 -->
+        <div class="reply_section">
+            <!-- 댓글 쓰기 창 -->
+            <div class="reply_insert">
+                <div class="reply_insNickname"><input id="visit" class="reply_insNickname_box" placeholder="이름"></div>
+                <div class="reply_insComment"><input id="vcom" class="reply_insComment_box" placeholder="1년 뒤 나의 모습"><button onclick="posting()" type="button" class="btn btn-danger dazimBtn">다짐하기</button></div>
+
+            </div>
+
+            <!-- 댓글 창 -->
+            <div id="reply_list" class="reply_list">
+                <div class="reply_line">
+                    <div class="reply_listNickname">닉네임</div>
+                    <div class="reply_listComment">댓글내용</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script> //불이모지 숫자 카운트 Script
+
+        $(document).ready(function () {
+            countUpload();
+        });
+
+        let count = 0; //되긴되는데 변수 선언 안해주면 처음에 에러남
+        function countUpload() {
+            fetch('/fire') // /fire 주소로 포스트 메소드 바디에 폼데이터 넣어서
+                .then((res) => res.json()) //res에 json 데이터를 쓸 수 있게 해주는 무언가
+                .then((data) => { // 가져온 json데이터를 'data'라는 변수에 담았는데 그거가지고 뭐할건지 밑에 적어라
+                    count = data['countNum'];
+                    document.querySelector(".fire_count").innerHTML = count;
+                })
+        }
+        $('#fire_count').append(count); // 여기에 토탈 fire 수 데이터 베이스 가져오기//
+        function countPlus() {
+            count++;
+            document.querySelector(".fire_count").innerHTML = count;
+
+            //데이터 베이스에 fire 수 업데이트 시키기//
+            let formData = new FormData(); //폼데이터 생성자
+            formData.append("fireCount_give", count); //폼데이터에다가 변수 Count를 추가함
+
+            fetch('/fire', { method: "POST", body: formData }) // /fire 주소로 포스트 메소드 바디에 폼데이터 넣어서
+                .then((res) => res.json()) //res에 json 데이터를 쓸 수 있게 해주는 무언가
+                .then((data) => { // 가져온 json데이터를 'data'라는 변수에 담았는데 그거가지고 뭐할건지 밑에 적어라
+                    console.log(data['msg']);
+                })
+        }
+    </script>
+
+    <!-- 방명록 post -->
+    <script>
+        function posting() {
+            let visit = $('#visit').val();
+            let vcom = $('#vcom').val();
+
+            let formData = new FormData();
+            formData.append("visit_give", visit);
+            formData.append("vcom_give", vcom);
+
+
+            fetch("/reply", { method: "POST", body: formData })
+                .then((res) => res.json())
+                .then((data) => {
+                    alert(data["msg"]);
+                    window.location.reload();
+                })
+        }
+    </script>
+
+    <!-- 방명록 get -->
+    <script>
+        $(document).ready(function () {
+            listing_reply();
+            console.log('리스팅 댓글 완료')
+        });
+
+        function listing_reply() {
+            fetch("/reply").then((res) => res.json()).then((data) => {
+                let rows = data['result']
+                $('#reply_list').empty()
+
+                rows.forEach((a) => {
+                    let visit = a['visit']
+                    let vcom = a['vcom']
+                    let temp_html = `
+                            <div class="reply_line">
+                                <div class="reply_listNickname">${visit}</div>
+                                <div class="reply_listComment">${vcom}</div>
+                            </div>
+
+                    `
+                    $('#reply_list').append(temp_html)
+                })
+            })
+        }
+    </script>
+
+    <!-- 방문자 -->
+    <div class="visitors">
+        <dt class="title_visit">Today Total</dt>
+        <a href="https://www.cutercounter.com/" target="_blank"><img
+                src="https://www.cutercounter.com/hits.php?id=hxnaxkd&nd=5&style=71" border="0"
+                alt="best free website hit counter"></a>
+    </div>
+
+    <!-- TOP버튼 파트 -->
+    <a href="#header">
+        <div class="top_button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="rgb(224, 224, 224)"
+                class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16" style="margin: auto; padding-bottom:6px;">
+                <path
+                    d="M3.204 11h9.592L8 5.519 3.204 11zm-.753-.659 4.796-5.48a1 1 0 0 1 1.506 0l4.796 5.48c.566.647.106 1.659-.753 1.659H3.204a1 1 0 0 1-.753-1.659z" />
+            </svg>
+        </div>
+    </a>
+
+
+
+
+</body>
+
+</html>

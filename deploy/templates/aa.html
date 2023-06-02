@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+
+    <script>
+        function hey() {
+            let formData = new FormData();
+            formData.append("sample_give", "블랙팬서");
+            
+            fetch("/fire", { method: "POST", body: formData }).then(res => res.json()).then(data => {
+                console.log(data)
+            })
+
+            alert('post!')
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="hey()">나는 버튼!</button>
+</body>
+
+</html>
